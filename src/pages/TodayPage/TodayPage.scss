@@ -10,7 +10,8 @@ $line-color: $n3-color;
 
 .today-page-container {
     background-color: $background-color;
-    display: flex;
+    display: grid;
+    grid-template-columns: 15% 84%;
     font-family: 'Roboto Flex', sans-serif;
     height: 100vh;
 }

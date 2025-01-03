@@ -4,7 +4,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
     font-family: 'Roboto', sans-serif;
 }
 
@@ -17,4 +16,42 @@ body {
     grid-template-columns: 15% 84%;
     gap: 1%;
     height: 100vh;
+}
+
+.menu-bar {
+    display: flex;
+    gap: 8px;
+
+    button {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: none;
+        border-radius: 10px;
+        background: #ceb6a0;
+        padding: 7px;
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+.wrapper {
+    width: 99%;
+    height: 88vh;
+    margin-top: 2vh;
+    padding-left: 20px;
+    overflow: scroll;
+}
+
+.wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.upload-button {
+    display: flex;
+    align-items: center;
+    gap: 7px;
 }

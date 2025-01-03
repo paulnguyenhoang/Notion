@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './UpcomingMonthPage.scss';
 
-import NavBar from '../../Components/NavBar1/NavBar1';
+import NavBar from '../../Components/NavBar/NavBar';
 
 // Mock data for important and not important notes and plans
 const mockImportantNotes = [
@@ -35,6 +35,8 @@ const mockNotImportantPlans = [
 ];
 
 const UpcomingMonth = () => {
+    const [listTask, setListTask] = useState([]);
+    const [idTask, setIdTask] = useState(0);
     const [importantNotes, setImportantNotes] = useState([]);
     const [importantPlans, setImportantPlans] = useState([]);
     const [notImportantNotes, setNotImportantNotes] = useState([]);
@@ -116,7 +118,9 @@ const UpcomingMonth = () => {
 
     return (
         <div className="upcoming-month-container">
-            <NavBar />
+           <div className="sidebar">
+                <NavBar listTask={listTask} setListTask={setListTask} setIdTask={setIdTask} idTask={idTask} />
+            </div>
             <div className="content">
                 <div className="heading-container">
                     <h1 className="upcoming-heading">UPCOMING</h1>
