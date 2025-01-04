@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './UpcomingDayPage.scss';
 
 import NavBar from '../../components/Navbar/Navbar';
 
 const UpcomingDayPage = () => {
+    const [listTask, setListTask] = useState([]);
+    const [idTask, setIdTask] = useState(0);
     const getFormattedDate = () => {
         const today = new Date();
         const options = { month: 'long', day: 'numeric', year: 'numeric' };
@@ -13,7 +15,9 @@ const UpcomingDayPage = () => {
 
     return (
         <div className="today-page-container">
-            <NavBar />
+            <div className="sidebar">
+                <NavBar listTask={listTask} setListTask={setListTask} setIdTask={setIdTask} idTask={idTask} />
+            </div>
             <div className="content">
                 <div className="heading-container">
                     <h1 className="today-heading">UPCOMING</h1>
